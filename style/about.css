@@ -1,16 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
 
-
-body {
-    font-family: "Bai Jamjuree", sans-serif;
-    font-weight: bold;
-}
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: bold;
+}
+
 header{
     padding: 30px 20px;
     background-color: rgb(137, 173, 200);
@@ -42,9 +43,9 @@ header > h1{
     color: #1f3e72;
 }
 .contentOne > img{
-     margin-top: 50px;
-     width: 100%;
-     height: 100%;
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
 }
 .contentTwo{
     color: #1f3e72;
