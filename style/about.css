@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: bold;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 30px 20px;
+    background-color: rgb(137, 173, 200);
+    color: white;
+    border-radius: 10px;
+}
+.head{
+    display: flex;
+}
+.head > h3{
+    padding: 20px 10px;
+}
+header > h1{
+    font-size: 60px;
+}
+.contentOne{
+    margin-top: 90px;
+}
+.contentOne > h1{
+    font-size: 50px;
+    margin-left: 20px;
+    width: 700px;
+    color: #1f3e72;
+}
+.contentOne > p{
+    font-size: 20px;
+    margin-top: 80px;
+    margin-left: 270px;
+    color: #1f3e72;
+}
+.contentOne > img{
+     margin-top: 50px;
+     width: 100%;
+     height: 100%;
+}
+.contentTwo{
+    color: #1f3e72;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    margin: 70px 20px;
+}
+.contentThree h1,.contentFour h1,.contentFive h1,.contentSix h1{
+    color: rgb(137, 173, 200);
+}
+.contentTwo h1, .Three h1 ,.Four h1, .Five h1, .Six h1{
+    font-size: 40px;
+}
+.contentTwo p, .Three p, .Four p, .Five p, .Six p{
+    font-size: 20px;
+}
+.contentThree ,.contentFour, .contentFive, .contentSix{
+    color: #1f3e72;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;  
+}
+.contentThree img ,.contentFive img{
+    margin-left: 80px;
+}
+.contentThree img ,.contentFour img, .contentFive img, .contentSix img{
+    width: 90%;
+    max-width: 100%; 
+}
+.Three , .Five{
+    margin-left: 50px;
+    margin-right: 60px;
+    border-top: 2px solid rgb(137, 173, 200);
+    border-right: 2px solid rgb(137, 173, 200);
+    border-radius: 10px;
+}
+.Three p, .Four p, .Five p, .Six p{
+    margin-top: 30px;
+    width: 400px;
+}
+.Four, .Six{
+    margin-left: 80px;
+    /*border-bottom: 2px solid rgb(137, 173, 200);
+    border-left: 2px solid rgb(137, 173, 200);
+    border-radius: 10px;*/
+}
+footer{
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(137, 173, 200);
+    display: flex; 
+    justify-content: space-between;
+    text-align: center;
+}
+.end > h2{
+    font-weight: bold;
+    font-size: 50px;
+}
+.end > p{
+    color: #1f3e72;
+}
+

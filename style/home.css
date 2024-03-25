@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
 
 body {
     background-color: #f1f7f8;
-    font-family: "Edu NSW Act Foundation", sans-serif;
+    font-family: "Bai Jamjuree", sans-serif;
     font-weight: bold;
 }
 
