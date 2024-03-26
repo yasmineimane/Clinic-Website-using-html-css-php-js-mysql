@@ -8,19 +8,3 @@
     text-decoration: none;
 }
 
-.btn {
-    width: max-content;
-    display: inline-block;
-    padding: 0.75rem 1rem;
-    border-radius: 6rem;
-    cursor: pointer;
-    border: none;
-    color: black;
-    background-color: #092454;
-}
-
-.btn:hover {
-    background-color: rgb(50, 50, 139);
-    color: white;
-    border-color: transparent;
-}

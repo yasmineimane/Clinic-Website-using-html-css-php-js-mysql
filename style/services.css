@@ -5,7 +5,7 @@ section {
 
 section > h2, section > h5 {
     text-align: center;
-    padding: 1rem;
+    padding: 3rem;
 }
 
 h2 {
@@ -38,6 +38,7 @@ h5 {
 .services__item:hover {
     border-color: var(--color-primary-variant);
     background: transparent;
+    cursor: pointer;
 }
 
 .services__item-image {
@@ -54,10 +55,54 @@ h5 {
 }
 
 .material-symbols-outlined {
-    color: brown;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 700,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.cardiolog, .neurolog, .orthoped, .surgi, .pregnant, .pediatri {
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.cardiolog {
+    color: #fe6564;
+    background-color: #ffdddc;
+    padding: 0.34rem;
+}
+
+.neurolog {
+    color: #5bbc94;
+    background-color: #dffbf1;
+}
+
+.orthoped {
+    color: #2b75f9;
+    background-color: #ddebfc;
+}
+
+.surgi {
+    color: #47bbf2;
+    background-color: #c4edfd;
+}
+
+.pregnant {
+    color: #b16f6f;
+    background-color: #e1cece;
+}
+
+.pediatri {
+    color: rgb(230, 205, 173);
+    background-color: rgb(249, 242, 232);
 }
 
 p {
-    padding: 0.3rem;
-    line-height: 1.3rem;
+    padding: 0.8rem;
+    line-height: 1.2rem;
+    color: #8e98ae;
+    font-size: 0.8rem;
+    text-align: justify;
+    text-align-last: center;
 }
