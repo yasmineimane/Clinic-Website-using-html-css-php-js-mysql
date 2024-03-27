@@ -12,8 +12,7 @@
     <?php include("nav.php"); ?>
 
     <section>
-        <!-- <h5>Our Services</h5> -->
-        <h2>Discover our Best Services</h2>
+        <h2>Discover Our Best Services</h2>
 
         <div class="container services__container">
             <article class='services__item'>
