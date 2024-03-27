@@ -36,7 +36,6 @@ h5 {
 }
 
 .services__item:hover {
-    border-color: var(--color-primary-variant);
     background: transparent;
     cursor: pointer;
 }
