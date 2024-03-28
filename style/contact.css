@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: bold;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+header > h2{
+    margin-top: 20px;
+    font-size: 30px;
+    color: #1f3e72;
+}
+
+.head{
+    display: flex;
+}
+.head > h2{
+    margin-top: 20px;
+    margin-right: 10px;
+    color: #1f3e72;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+.contact-info{
+    padding: 30px;
+}
+.c-info{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.call p ,.call a ,.loc p{
+    margin-top: 15px;
+    color: #1f3e72;
+}
+.location{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.icons{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    margin-top: 50px;
+    cursor: pointer;
+}
+.contact-form > p{
+    margin-bottom: 10px;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form  textarea {
+    resize: vertical;
+}
+
+.contact-form  button {
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+    color: #1f3e72;;
+}
