@@ -12,20 +12,13 @@ body {
     font-weight: bold;
 }
 
-header{
-    padding: 30px 20px;
-    background-color: rgb(137, 173, 200);
-    color: white;
-    border-radius: 10px;
-}
 .head{
-    display: flex;
+    padding: 30px 20px;
+    background-color: #aec0dc;
 }
-.head > h3{
-    padding: 20px 10px;
-}
-header > h1{
+.head > h1{
     font-size: 60px;
+    color: white;
 }
 .contentOne{
     margin-top: 90px;
