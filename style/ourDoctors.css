@@ -1,0 +1,59 @@
+section {
+    height: 160vh;
+    background-color: #fff;
+}
+
+section > h2, section > h5 {
+    text-align: center;
+    padding: 0.3rem;
+}
+
+h2 {
+    color: #1f3e72;
+}
+
+h5 {
+    color: #909bb2;
+    text-align: center;
+}
+
+.container {
+    width: 81%;
+    margin: 0 auto;
+}
+
+.doctors__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.doctors__item {
+    background: #f9fafb;
+    /* padding: 1rem; */
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.doctors__item:hover {
+    background: transparent;
+    cursor: pointer;
+}
+
+.doctors__item-image {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.doctors__item h2 {
+    text-align: center;
+    padding: 0.5rem;
+}

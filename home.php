@@ -19,7 +19,7 @@
             </p>
             <a href="./rndv.html" class="btn btn__home">Make an Apointment</a>
         </div>
-        <img src="./images/home.png" alt="home">
+        <img src="./images/bg.png" alt="home">
     </div>
 </body>
 </html>
