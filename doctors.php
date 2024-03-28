@@ -25,15 +25,32 @@
                 <div class="doctors__item-image">
                     <img src="./images/doctd2.PNG" alt="doctd2">
                 </div>
-                <h2>Dr. Yas</h2>
+                <h2>Dr. Jenny Wilson</h2>
                 <h5>Neurologist</h5>
             </article>
             <article class='doctors__item'>
                 <div class="doctors__item-image">
                     <img src="./images/doctd3.PNG" alt="doct3">
                 </div>
-                <h2>Dr. aich</h2>
+                <h2>Dr. Kristin Watson</h2>
                 <h5>Orthopedist</h5>
+                <div>
+                    
+                </div>
+            </article>
+            <article class='doctors__item'>
+                <div class="doctors__item-image">
+                    <img src="./images/doctd4.jpg" alt="doct4">
+                </div>
+                <h2>Dr. Bella Switie</h2>
+                <h5>Obstetrist</h5>
+            </article>
+            <article class='doctors__item'>
+                <div class="doctors__item-image">
+                    <img src="./images/doctd5.jpg" alt="doct5">
+                </div>
+                <h2>Dr. Bahar Ozden</h2>
+                <h5>Pediatrist</h5>
             </article>
         </div>
     </section>
