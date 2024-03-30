@@ -16,7 +16,7 @@
             <li><a href="./services.php">Our Services</a></li>
             <li><a href="./about.php">About Us</a></li>
             <li><a href="./contact.php">Contact</a></li>
-            <li><a href="./singUp.php">Sing Up</a></li>
+            <li><a href="./singup.php">Sing Up</a></li>
             <li><a href="./logIn.php" class="logIn">Log In</a></li>
         </ul>
     </nav>

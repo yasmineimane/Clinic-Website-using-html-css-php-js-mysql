@@ -7,6 +7,8 @@
     <title>Log In</title>
 </head>
 <body>
+<?php include("nav.php"); ?>
+
     <main>
         <section class="login-form">
             <p></p>

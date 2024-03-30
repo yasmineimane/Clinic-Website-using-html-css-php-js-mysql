@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: bold;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    padding: 20px;
+}
+
+.singup-form{
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+.singup-form input[type="text"],
+.singup-form input[type="tel"],
+.singup-form input[type="date"],
+.singup-form input[type="email"],
+.singup-form input[type="password"],
+.singup-form textarea
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(222, 216, 216);
+}
+
+
+button{
+    width: 100%;
+    background-color: #aec0dc;
+    color: white;
+    padding: 8px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+.content{
+    margin: 20px auto;
+}
+.content > h1{
+    font-size: 40px;
+    color:  #aec0dc;
+    margin-bottom: 10px;
+}
+.content > h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #092454;
+}
+.content > p{
+    margin-bottom: 10px;
+    color: #092454;
+}
+.content > p > a{
+    color: #aec0dc;
+}
+.content > img{
+    width: 90%;
+    height: 70%;
+}
+
