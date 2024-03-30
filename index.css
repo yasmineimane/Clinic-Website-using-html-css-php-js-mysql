@@ -8,3 +8,7 @@
     text-decoration: none;
 }
 
+div.home {
+    background-image: url("../images/doctors.jpg");
+    background-repeat: no-repeat;
+}

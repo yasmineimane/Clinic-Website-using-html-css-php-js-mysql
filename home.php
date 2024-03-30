@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./style/home.css">
 </head>
 <body>
     <?php include("nav.php"); ?>
@@ -19,7 +18,7 @@
             </p>
             <a href="./rndv.html" class="btn btn__home">Make an Apointment</a>
         </div>
-        <img src="./images/home.png" alt="home">
+        <img src="./images/bg.png" alt="home">
     </div>
 </body>
 </html>
