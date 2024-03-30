@@ -11,26 +11,92 @@ body {
     margin: 0;
 }
 
-main{
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
-    padding: 20px;
+.signup {
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
-.singup-form{
-    margin: auto;
+.signup h2{
+    font-size: 3rem;
+}
+
+.SignUpForm {
+    width: 40%;
+    padding: 30px 40px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: white;
+    border-radius: 10px;
+}
+
+.SignUpForm h2 {
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    color: rgba(0, 81, 255, 0.902);
+}
+
+.SignUpForm .inputBox {
+    position: relative;
     width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    background-color: rgba(245, 245, 245, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 3px;
 }
-label {
-    display: block;
-    margin-bottom: 6px;
+
+.SignUpForm .inputBox input,
+.SignUpForm .inputBox textarea {
+    width: 100%;
+    padding: 11px 0;
+    font-size: 1rem;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid rgb(143, 173, 236);
+    outline: none;
+    resize: none;
 }
-.singup-form input[type="text"],
+
+.SignUpForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 11px 0;
+    font-size: 1rem;
+    margin: 10px 8px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: rgb(169, 188, 229);
+}
+
+/* .SignUpForm .inputBox span.blood {
+    left: -9px;
+    bottom: -4px;
+} */
+
+.SignUpForm .inputBox input:focus ~ span,
+.SignUpForm .inputBox input:valid ~ span,
+.SignUpForm .inputBox textarea:focus ~ span,
+.SignUpForm .inputBox textarea:valid ~ span {
+    color: rgb(0, 119, 255);
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.SignUpForm .inputBox input[type="date"]
+{
+    color: white;
+}
+
+.SignUpForm .inputBox input[type="date"]:focus 
+{
+    color: #aec0dc;
+}
+
+
+/* .singup-form input[type="text"],
 .singup-form input[type="tel"],
 .singup-form input[type="date"],
 .singup-form input[type="email"],
@@ -51,11 +117,11 @@ button{
     padding: 8px;
     border-radius: 16px;
     cursor: pointer;
-}
-.content{
+} */
+/* .content{
     margin: 20px auto;
-}
-.content > h1{
+} */
+/* .content > h1{
     font-size: 40px;
     color:  #aec0dc;
     margin-bottom: 10px;
@@ -75,5 +141,19 @@ button{
 .content > img{
     width: 90%;
     height: 70%;
+} */
+
+/* .content {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 3rem;
 }
 
+.content > h1{
+    font-size: 40px;
+    color:  #aec0dc;
+    margin-bottom: 10px;
+} */
