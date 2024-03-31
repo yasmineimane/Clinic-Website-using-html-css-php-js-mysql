@@ -11,17 +11,19 @@
 
     <main>
         <section class="login-form">
-            <p></p>
+            <h1>Log in</h1>
+            <p>New in Health Care hospital? <a href="singup.php"> Sing Up</a></p>
             <form action="submitloginform.php" method="POST">
-                <label for="email"></label>
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email"  placeholder="enter your email" required>
-                <label for="Password"></label>
-                <input type="password" id="password" name="password"  placeholder="enter your password" required><br>
+                <label for="Password">Password:</label>
+                <input type="password" id="password" name="password"  placeholder="enter your password" required>
+                <div class="remembre">
+                    <input type="checkbox"id="Remember" name="Remember"required>
+                    <label for="rememberMe">Remember Me</label>
+                </div>
                 <button type="submit">Login</button>
             </form>
-        </section>
-        <section>
-            <img src="./images/login.png" alt="login">
         </section>
     </main>
 </body>

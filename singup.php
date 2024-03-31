@@ -11,7 +11,6 @@
 
     <main>
         <section class="singup-form">
-            <p></p>
             <form action="submitsingupform.php" method="POST">
                 <label for="first name">First Name:</label>
                 <input type="text" id="first name" name="first name" required>
