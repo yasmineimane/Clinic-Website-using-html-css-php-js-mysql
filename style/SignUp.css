@@ -53,7 +53,8 @@ body {
 }
 
 .SignUpForm .inputBox input,
-.SignUpForm .inputBox textarea {
+.SignUpForm .inputBox textarea,
+.SignUpForm .inputBox select {
     width: 100%;
     padding: 11px 0;
     font-size: 1rem;
@@ -73,6 +74,24 @@ body {
     pointer-events: none;
     transition: 0.5s;
     color: rgb(169, 188, 229);
+}
+
+.SignUpForm .inputBox select {
+    padding: 11px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    /* margin: 10px 8px; */
+    color: rgb(169, 188, 229);
+}
+
+.SignUpForm p {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.SignUpForm p a {
+    color: blue;
 }
 
 /* .SignUpForm .inputBox span.blood {
@@ -99,6 +118,24 @@ body {
     color: #aec0dc;
 }
 
+.SignUpForm .inputBox input[type="submit"] {
+    border: none;
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    background-color: rgb(42, 42, 118);
+    padding: 0.75rem 1rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(175, 208, 244);
+    color: rgb(0, 128, 255);
+    border-color: transparent;
+}
 
 /* .singup-form input[type="text"],
 .singup-form input[type="tel"],

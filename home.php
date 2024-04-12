@@ -16,7 +16,7 @@
                 Our skilled doctors have tremendous experience with wide range
                 of diseases to serve the needs of our patients.
             </p>
-            <a href="./rndv.html" class="btn btn__home">Make an Apointment</a>
+            <a href="./logIn.php" class="btn btn__home">Make an Apointment</a>
         </div>
         <img src="./images/home.png" alt="home">
     </div>
