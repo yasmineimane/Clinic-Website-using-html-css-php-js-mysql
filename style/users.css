@@ -1,0 +1,113 @@
+.row {
+    margin-left: 120px;
+}
+
+.card {
+    background: white;
+    border-radius: 5px;
+    padding: 13px;
+    margin: 10px;
+}
+
+.card-header {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    margin-bottom: 15px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    background-color: rgb(42, 42, 118);
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: rgb(175, 208, 244);
+    color: rgb(0, 128, 255);
+    border-color: transparent;
+}
+
+.danger {
+    background-color: crimson;
+}
+
+.btnSave {
+    padding: 0.75rem 1rem;
+}
+
+.mb-4 {
+    position: relative;
+}
+
+input {
+    width: 70%;
+    padding: 11px 0;
+    font-size: 1rem;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid rgb(143, 173, 236);
+    outline: none;
+    resize: none;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    padding: 11px 0;
+    margin: 10px 8px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+    color: rgb(0, 119, 255);
+    font-size: 15px;
+    transform: translateY(-20px);
+}
+
+input[type="date"]
+{
+    color: white;
+}
+
+input[type="date"]:focus 
+{
+    color: #aec0dc;
+}
+
+select {
+    color: rgb(0, 119, 255);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(200, 188, 188);
+}
+th, td {
+    padding: 10px;
+    border: 1px solid rgb(200, 188, 188);
+    text-align: center;
+}
+
+th {
+    color: rgb(86, 86, 132);
+    border-bottom: 2px solid grey;
+}
+
+/* tr {
+    background-color: #efe7e7;
+} */

@@ -15,23 +15,109 @@ body{
     background-size: cover;
 }
 
-.login-form{
-    margin: auto;
-    margin-top: 60px;
-    width: 100%;
-    max-width: 400px;
-    height: 400px;
-    padding: 30px;
-    background-color: rgba(245, 245, 245, 0.3);
-    border-radius: 16px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-}
-label {
-    display: block;
-    margin-bottom: 6px;
+.login {
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
-.login-form input[type="email"],
+.login h2{
+    font-size: 3rem;
+}
+
+.LogInForm {
+    width: 40%;
+    padding: 30px 40px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: white;
+    border-radius: 10px;
+}
+
+.LogInForm h2 {
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    color: rgba(0, 81, 255, 0.902);
+}
+
+.LogInForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.LogInForm .inputBox input {
+    width: 100%;
+    padding: 11px 0;
+    font-size: 1rem;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid rgb(143, 173, 236);
+    outline: none;
+    resize: none;
+}
+
+.LogInForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 11px 0;
+    font-size: 1rem;
+    margin: 10px 8px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: rgb(169, 188, 229);
+}
+
+.LogInForm p {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.LogInForm p a {
+    color: blue;
+}
+
+.LogInForm .inputBox input:focus ~ span,
+.LogInForm .inputBox input:valid ~ span {
+    color: rgb(0, 119, 255);
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    background-color: rgb(42, 42, 118);
+    padding: 0.75rem 1rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(175, 208, 244);
+    color: rgb(0, 128, 255);
+    border-color: transparent;
+}
+
+.error-msg{
+    color: red;
+    /* margin:8px 0;
+    display: block;
+    background: crimson;
+    color:#fff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 7px; */
+}
+
+/* .login-form input[type="email"],
 .login-form input[type="password"]{
     width: 100%;
     padding: 10px;
@@ -57,13 +143,19 @@ label {
 
 .login-form  > h1{
     font-size: 40px;
-    color:  #aec0dc;
+    color:  rgba(0, 81, 255, 0.902);
     margin-bottom: 10px;
+    text-align: center;
 }
-.login-form  > p{
-    margin-bottom: 10px;
-    color: #092454;
+.login-form form  p{
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
 }
-.login-form  > p > a{
-    color: #a1bce7;;
+.login-form  form p a{
+    color: blue;
 }
+
+.login-form  > p > a:hover {
+    color: white;
+} */
