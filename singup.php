@@ -7,7 +7,6 @@
         $dateOfBirth = $_POST["dob"];
         $blood = $_POST["blood"];
         $adress = $_POST["address"];
-        $phone = $_POST["phone"];
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
         $user_type = $_POST["user_type"];
@@ -21,8 +20,8 @@
         else
         {
             $insert = "INSERT INTO patient (First_Name, Last_Name, Date_of_birth, blood,
-            adress, phone, email, password, user_type) VALUES('$firstName', '$lastName', '$dateOfBirth', '$blood',
-            '$adress', '$phone', '$email', '$password', '$user_type')";
+            adress, email, password, user_type) VALUES('$firstName', '$lastName', '$dateOfBirth', '$blood',
+            '$adress', '$email', '$password', '$user_type')";
             mysqli_query($conn, $insert);
             if ($_POST['user_type'] == 'admin')
             {
@@ -44,7 +43,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/SignUp.css">
+    <link rel="stylesheet" href="./style/signUp.css">
     <title>Sign Up</title>
 </head>
 <body>
@@ -79,26 +78,11 @@
                     <div class="inputBox">
                         <input type="text" id="blood" name='blood' required />
                         <span class="blood">Blood Group</span>
-                        <!-- <select id="blood group" name="blood group">
-                        <option value="A+">A+</option>
-                        <option value="A-">A-</option>
-                        <option value="B+">B+</option>
-                        <option value="B-">B-</option>
-                        <option value="AB+">AB+</option>
-                        <option value="AB-">AB-</option>
-                        <option value="O+">O+</option>
-                        <option value="O-">O-</option>
-                        </select> -->
                     </div>
                 
                     <div class="inputBox">
                         <textarea id="address" name="address" required></textarea>
                         <span>Adress</span>
-                    </div>
-                
-                    <div class="inputBox">
-                        <input type="tel" id="phone" name="phone" required>
-                        <span>Phone Number</span>
                     </div>
                 
                     <div class="inputBox">

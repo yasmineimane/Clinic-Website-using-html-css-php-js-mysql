@@ -39,35 +39,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/LogIn.css">
     <title>Log In</title>
 </head>
 <body>
-<?php include("nav.php"); ?>
+    <?php include("nav.php"); ?>
 
-    <main>
-        <section class="login-form">
-            <h1>Log in</h1>
-            <?php
-                if(isset($error)){
-                    foreach($error as $error){
-                        echo '<span class="error-msg">'.$error.'</span>';
-                    };
-                };
-            ?>
+    <section class="login">
+        <div class="LogInForm">
             <form action="#" method="POST">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"  placeholder="enter your email" required>
-                <label for="Password">Password:</label>
-                <input type="password" id="password" name="password"  placeholder="enter your password" required>
-                <!-- <div class="remembre">
-                    <input type="checkbox"id="Remember" name="Remember"required>
-                    <label for="rememberMe">Remember Me</label>
-                </div> -->
-                <input type="submit" name="Submit" value="Log In">
-                <p>New in Health Care hospital? <a href="singup.php"> Sing Up</a></p>
+                <h2>Log In</h2>
+                <?php
+                    if(isset($error)){
+                        foreach($error as $error){
+                        echo '<span class="error-msg">'.$error.'</span>';
+                        };
+                    };
+                ?>
+                <div class="inputBox">
+                    <input type="email" id="email" name="email" required>
+                    <span>Email</span>
+                </div>
+            
+                <div class="inputBox">
+                    <input type="password" id="password" name="password" required>
+                    <span>Password</span>
+                </div>
+            
+                <div class="inputBox">
+                    <input type="submit" name="Submit" class='btn' required value="LogIn" />
+                </div>
+                <p>New in Health Care hospital?   <a href="singup.php">Sing Up</a></p>
             </form>
-        </section>
-    </main>
+        </div>
+    </section>
 </body>
 </html>
