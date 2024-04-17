@@ -1,5 +1,7 @@
 <?php
+    include("dbconnect.php");
     include("sidebar.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -42,10 +44,6 @@
                         <div class="mb-4">
                             <input type="text" name="adress">
                             <label>Adress</label>
-                        </div>
-                        <div class="mb-4">
-                            <input type="text" name="phone">
-                            <label>Phone</label>
                         </div>
                         <div class="mb-4">
                             <input type="email" name="email">
