@@ -2,6 +2,8 @@
 
 
 body {
+    background-image: url('../images/log.png');
+    background-size: cover;
     font-family: "Bai Jamjuree", sans-serif;
     font-weight: bold;
 }
@@ -10,23 +12,20 @@ body {
     margin: 0;
     padding: 0;
 }
-header{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-header > h2{
-    margin-top: 20px;
-    font-size: 30px;
-    color: #1f3e72;
-}
 
-.head{
-    display: flex;
+.header{
+    text-align: center;
 }
-.head > h2{
-    margin-top: 20px;
-    margin-right: 10px;
+.header > h1{
+    margin-top: 10px;
     color: #1f3e72;
+}
+.header > p{
+    padding: 0.8rem;
+    line-height: 1.2rem;
+    color: #8e98ae;
+    text-align: justify;
+    text-align: center;
 }
 .container{
     display: grid;
@@ -34,51 +33,81 @@ header > h2{
     padding: 20px;
 }
 .contact-info{
-    padding: 30px;
+    width: 60%;
+    height: 70%;
+    padding: 30px 40px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    margin-left: 100px;
 }
-.c-info{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.info{
+    text-align: center;
 }
-.call p ,.call a ,.loc p{
+.info > h3{
     margin-top: 15px;
+    color: black;
+}
+.info p ,.info a{
     color: #1f3e72;
 }
-.location{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 .icons{
-    display: grid;
-    grid-template-columns: repeat(4 , 1fr);
-    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
     cursor: pointer;
 }
-.contact-form > p{
-    margin-bottom: 10px;
+.icons a i {
+    font-size: 30px; 
 }
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
+.contact-form{
+    width: 80%;
+    padding: 30px 40px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    margin-left: 140px;
+}
+
+.contact-form label{
+    color: #1f3e72;
+}
+.contact-form > p{
+    font-weight: 900;
+    text-align: center;
+    color: rgba(0, 81, 255, 0.902);
+    margin-bottom: 10px;
 }
 .contact-form input[type="text"],
 .contact-form input[type="email"],
-.contact-form textarea {
+.contact-form input[type="phone"],
+.contact-form textarea  {
+    position: relative;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-top: 3px;
 }
 
-.contact-form  textarea {
-    resize: vertical;
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="phone"],
+.contact-form textarea  {
+    width: 100%;
+    padding: 11px 0;
+    font-size: 1rem;
+    margin: 10px 0;
+    border: 2px solid rgb(143, 173, 236);;
+    outline: none;
+    resize: none;
 }
-
 .contact-form  button {
-    background-color: black;
+    text-align: center;
+    margin: auto;
+    background-color: #1f3e72;
     color: #fff;
     padding: 10px 20px;
     border: none;

@@ -53,8 +53,8 @@ body {
 }
 
 .SignUpForm .inputBox input,
-.SignUpForm .inputBox textarea,
-.SignUpForm .inputBox select {
+.SignUpForm .inputBox textarea
+{
     width: 100%;
     padding: 11px 0;
     font-size: 1rem;
@@ -76,7 +76,7 @@ body {
     color: rgb(169, 188, 229);
 }
 
-.SignUpForm .inputBox select {
+.SignUpForm .inputBox{
     padding: 11px 0;
     font-size: 1rem;
     font-weight: bold;
@@ -113,7 +113,8 @@ body {
     color: white;
 }
 
-.SignUpForm .inputBox input[type="date"]:focus 
+.SignUpForm .inputBox input[type="date"]:focus
+.SignUpForm .inputBox input[type="date"]:valid
 {
     color: #aec0dc;
 }

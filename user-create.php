@@ -10,7 +10,6 @@
         $adress = $_POST["adress"];
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = password_hash($_POST["pass"], PASSWORD_DEFAULT);
-        $user_type = $_POST["user_type"];
 
         $sql = "SELECT * FROM patient WHERE email = '$email'";
 
@@ -21,9 +20,10 @@
         else
         {
             $insert = "INSERT INTO patient (First_Name, Last_Name, Date_of_birth, blood,
-            adress, email, password, user_type) VALUES('$firstName', '$lastName', '$dateOfBirth', '$blood',
-            '$adress', '$email', '$password', '$user_type')";
+            adress, email, password) VALUES('$firstName', '$lastName', '$dateOfBirth', '$blood',
+            '$adress', '$email', '$password')";
             mysqli_query($conn, $insert);
+            header('location:users.php');
         }
     }
 ?>
@@ -62,17 +62,22 @@
                             <label>Date of birth</label>
                         </div>
                         <div class="mb-4">
-                            <input type="text" name="blood">
+                            <select name="blood">
+                                <option value="O+">O+</option>
+                                <option value="A+">A+</option>
+                                <option value="B+">B+</option>
+                                <option value="AB+">AB+</option>
+                                <option value="O-">O-</option>
+                                <option value="A-">A-</option>
+                                <option value="B-">B-</option>
+                                <option value="AB-">AB-</option>
+                            </select>
                             <label>Blood</label>
                         </div>
                         <div class="mb-4">
                             <input type="text" name="adress">
                             <label>Adress</label>
                         </div>
-                        <!-- <div class="mb-4">
-                            <input type="text" name="phone">
-                            <label>Phone</label>
-                        </div> -->
                         <div class="mb-4">
                             <input type="email" name="email">
                             <label>Email</label>
@@ -80,12 +85,6 @@
                         <div class="mb-4">
                             <input type="password" name="pass">
                             <label>Password</label>
-                        </div>
-                        <div class="mb-4">
-                            <select name="user_type">
-                                <option value="user">user</option>
-                                <option value="admin">admin</option>
-                            </select>
                         </div>
                         <div class="mb-4">
                             <button type="submit" name="saveUser" class="btn btnSave">Save</button>

@@ -4,94 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style/about.css">
+    <link rel="stylesheet" href="./style/About.css">
 </head>
 <body>
     <?php include("nav.php"); ?>
     
-    <div class="head">
-        <h1>Celebrating Excellence in Healthcare Unveiling Our Story</h1>
-    </div>
     <main>
-        <section class="contentOne">
-            <h1>Innovative Compassion: Our Commitment to Exceptional Healthcare</h1>
-            <p>Welcome to [Hospital Name], where compassion meets innovation in healthcare.
-                Our mission is to provide exceptional medical care with a focus on patient well-being and satisfaction. 
-                Led by a dedicated team of professionals, we strive for excellence in every aspect of our operations. 
-                Experience the difference at [Hospital Name]
-                where your health and comfort are our top priorities.
-            </p>
-            <img src="./images/about.jpg" alt="about">
+        <section class="content">
+            <p>Why Choose Us</p>
+            <h1>Why You Should Chosse Us</h1>
+            <h1>Get Know About Us</h1>    
         </section>
-        <section class="contentTwo">
-            <h1>Discover [Hospital Name]: Your Health Partner</h1>
-            <p>At [Hospital Name], we are more than just a healthcare facility 
-                we are a beacon of hope, healing, and compassion in the heart of [City/Region].
-                Since our inception, we have remained steadfast in our commitment to providing exceptional medical care and support to our community.
-                Guided by a mission to prioritize patient well-being above all else, our hospital has earned a reputation for excellence, innovation,
-                and dedication to service. As we embark on this journey together, 
-                we invite you to explore the rich history and meet the dedicated professionals who make [Hospital Name] a trusted leader in healthcare.
-            </p>
-        </section>
-        <div class="container">
-        <section class="contentThree">
-            <img src="./images/history.jpg" alt="history">
-            <div class="Three">
-                <h1>Our History</h1>
-                <p>Established in [Year], [Hospital Name] has been a cornerstone of healthcare in [City/Region]. 
-                From our humble beginnings to our current state-of-the-art facilities,
-                we have remained dedicated to serving our community with the highest standards of care.
-                </p>
+        <section class="contentone">
+            <div class="about">
+                <div class="icon">
+                    <i class="material-icons-outlined">groups</i>
+                </div>
+                <h2>All Professionals</h2>
+                <p>Welcome to healthcare, where compassionate care meets excellence. 
+                Our dedicated team ensures exceptional medical services in a patient-centered environment.
+                Trust us for all your healthcare needs.</p>
+            </div>
+            <div class="about">
+                <div class="icon">
+                    <i class="material-icons-outlined">security</i>
+                </div>
+                <h2>Fully Secure</h2>
+                <p>Welcome to healthcare, your trusted destination for secure and compassionate healthcare services.
+                Our commitment to security ensures your peace of mind while receiving top-quality medical care.
+                Trust us for your health and well-being.</p>
+            </div>
+            <div class="about">
+                <div class="icon">
+                    <i class="material-icons-outlined">sentiment_satisfied</i>
+                </div>
+                <h2>Happy Patients</h2>
+                <p>At healthcare, our mission is to create happy and satisfied patients.
+                With personalized care and a focus on your well-being, 
+                we strive to exceed your expectations and leave you with a smile. 
+                Experience the difference at healthcare.</p>
+            </div>
+            <div class="about">
+                <div class="icon">
+                    <i class="material-icons-outlined">support_agent</i>
+                </div>
+                <h2>24 Hours Suupport</h2>
+                <p>At healthcare, we provide round-the-clock support to ensure your peace of mind. 
+                Our dedicated team is here for you 24/7,
+                offering assistance and care whenever you need it. 
+                Trust us to be there for you, anytime, anywhere.</p>
             </div>
         </section>
-        <section class="contentFour">
-            <div class="Four">
-                <h1>Leadership Team</h1>
-                <p>Meet the dedicated professionals who lead [Hospital Name] in its mission to provide exceptional healthcare services:
-                [CEO Name], Chief Executive Officer
-                [Medical Director Name], Medical Director
-                [Administrator Name], Hospital Administrator
-                </p>
-            </div>
-            <img src="./images/Medical-doctors.jpg" alt="Medical-doctors">
-        </section>
-        <section class="contentFive">
-            <img src="./images/Facilities.jpg" alt="Facilities">
-            <div class="Five">
-                <h1>Facilities</h1>
-                <p>Our hospital is equipped with state-of-the-art technology and modern facilities to ensure the comfort and well-being of our patients.
-                From our advanced surgical suites to our cozy patient rooms, 
-                every aspect of our hospital is designed with your care in mind.
-                </p>
-            </div>
-        </section>
-        <section class="contentSix">
-            <div class="Six">
-                <h1>Why Choose [Hospital Name]?</h1>
-                <p>Compassionate Care. <br>
-                Innovative Approach. <br>
-                Patient-Centered Philosophy. <br>
-                Comprehensive Services. <br>
-                Community Connection. <br>
-                Commitment to Excellence.
-                </p>
-            </div>
-            <img src="./images/whyus.avif" alt="why us">
-        </section>
-    </main>
-    <footer>
-        <div class="end">
-            <h2>15+</h2>
-            <p>Years of Experience</p>
+        <div class="one">
+        <h1>What Our Patients Say About Us</h1>
         </div>
-        <div class="end">
-            <h2>1000+</h2>
-            <p>Successful Surgeries</p>
-        </div>
-        <div class="end">
-            <h2>24/7</h2>
-            <p>Emergency Services</p>
-        </div>
-    </footer>
+        <section class="contenttwo">
+            <div class="aboutus"> 
+                <!--div class="image">
+                    <img src="./images/Sarah Johnson.png" alt="Sarah Johnson">
+                </div-->
+                <h2>Sarah Johnson</h2>
+                <p>Sarah Johnson came to healthcare seeking care for a minor injury,
+                and was impressed by the warm welcome and efficient service. The skilled medical team provided personalized attention, making her feel safe and well-cared for throughout her visit.
+                Sarah highly recommends [Hospital Name] for its exceptional care and friendly staff</p>
+            </div>
+            <div class="aboutus">
+                <h2>Michael Smith</h2>
+                <p>Michael Smith visited healthcare for a routine check-up and was amazed by the professionalism and dedication of the medical staff.
+                From the moment he entered, he felt reassured by the hospital's commitment to patient care and safety.
+                Michael trusts healthcare for his healthcare needs and appreciates the peace of mind they provide</p>
+            </div>
+            <div class="aboutus">
+                <h2>Emily Rodriguez</h2>
+                <p>Choosing healthcare for my recent surgical procedure was the best decision I made. The moment I walked in, 
+                I felt at ease knowing I was in capable hands. The advanced facilities and caring staff made my recovery journey smooth and reassuring.
+                I'm truly grateful for the exceptional care I received at healthcare and wholeheartedly recommend it to anyone in need of quality healthcare.</p>
+            </div>
+        </section>
+        <section class="contentthree">
+            <div class="end">
+                <h2>300+</h2>
+                <p>Regular Patients</p>
+            </div>
+            <div class="end">
+                <h2>1000+</h2>
+                <p>Patients Capacity</p>
+            </div>
+            <div class="end">
+                <h2>150+</h2>
+                <p>Expert Doxtors</p>
+            </div>
+            <div class="end">
+                <h2>05+</h2>
+                <p>Years Experience</p>
+            </div>
+        </section>
+        </main>
 </body>
 </html>

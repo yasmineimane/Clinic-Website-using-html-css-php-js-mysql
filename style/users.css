@@ -1,18 +1,22 @@
 .row {
-    margin-left: 120px;
+    margin-left: 250px;
 }
 
 .card {
     background: white;
     border-radius: 5px;
-    padding: 13px;
+    padding: 10px;
     margin: 10px;
 }
 
 .card-header {
     display: grid;
-    grid-template-columns: 10fr 1fr;
+    grid-template-columns: 8fr 1fr;
     margin-bottom: 15px;
+
+    & > h4 {
+        text-align: center;
+    }
 }
 
 form {
@@ -49,7 +53,7 @@ form {
     position: relative;
 }
 
-input {
+input, select {
     width: 70%;
     padding: 11px 0;
     font-size: 1rem;
@@ -71,8 +75,8 @@ label {
 
 input:focus ~ label,
 input:valid ~ label,
-textarea:focus ~ label,
-textarea:valid ~ label {
+select:focus ~ label,
+select:valid ~ label {
     color: rgb(0, 119, 255);
     font-size: 15px;
     transform: translateY(-20px);
@@ -80,7 +84,8 @@ textarea:valid ~ label {
 
 input[type="date"]
 {
-    color: white;
+    color: rgb(200, 188, 188);
+    padding: 10px;
 }
 
 input[type="date"]:focus 
@@ -89,7 +94,7 @@ input[type="date"]:focus
 }
 
 select {
-    color: rgb(0, 119, 255);
+    color: rgb(5, 26, 50);
 }
 
 table {
@@ -98,7 +103,7 @@ table {
     border: 1px solid rgb(200, 188, 188);
 }
 th, td {
-    padding: 10px;
+    padding: 5px;
     border: 1px solid rgb(200, 188, 188);
     text-align: center;
 }
@@ -108,6 +113,51 @@ th {
     border-bottom: 2px solid grey;
 }
 
-/* tr {
-    background-color: #efe7e7;
-} */
+.alert_message {
+    color: #aec0dc;
+}
+
+.error-msg {
+    color: crimson;
+    padding: 10px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.appTimeElement {
+    width: 200px;
+    background: rgb(224, 233, 255);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+
+    & > label {
+        bottom: -32px;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+        font-weight: 500;
+    }
+}
+
+.appTimeElement:hover {
+    background: rgb(243, 246, 255);
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    position: absolute;
+    left: 120px;
+    bottom: 2px;
+}
+
+input[type="radio"]:hover {
+    cursor: pointer;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}

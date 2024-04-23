@@ -82,8 +82,8 @@ body {
 }
 
 .links h4 {
-    color: #222;
-    font-weight: 500;
+    color: rgb(7, 7, 71);
+    font-weight: 300;
     display: none;
     margin-bottom: 10px;
 }
@@ -107,9 +107,9 @@ body {
 
 .links li a {
     padding: 10px;
-    color: #000;
+    color: rgb(49, 49, 130);
     display: none;
-    font-weight: 500;
+    font-weight: 200;
     white-space: nowrap;
     text-decoration: none;
 }

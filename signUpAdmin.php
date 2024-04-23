@@ -1,53 +1,53 @@
 <?php
     include("dbconnect.php");
 
+    // $adminEmail = "admin@gmail.com";
+    $adminPass = "12345";
+
     if (isset($_POST["Submit"])) {
         $firstName = mysqli_real_escape_string($conn, $_POST['firstName']);
         $lastName = mysqli_real_escape_string($conn, $_POST['lastName']);
-        $dateOfBirth = $_POST["dob"];
-        $blood = $_POST["blood"];
-        $adress = $_POST["address"];
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-        $sql = "SELECT * FROM patient WHERE email = '$email'";
+        $sql = "SELECT * FROM admin WHERE email = '$email'";
 
         $result = mysqli_query($conn, $sql);
         if(mysqli_num_rows($result) > 0){
-            $errors[] = 'user already exist!';
+            $error[] = 'admin already exist!';
+        }
+        else if ($_POST["password"] != $adminPass)
+        {
+            $error[] = 'Incorrect password';
         }
         else
         {
-            $insert = "INSERT INTO patient (First_Name, Last_Name, Date_of_birth, blood,
-            adress, email, password) VALUES('$firstName', '$lastName', '$dateOfBirth', '$blood',
-            '$adress', '$email', '$password');";
+            $insert = ("INSERT INTO admin (firstName, lastName, email, password) VALUES 
+            ('$firstName', '$lastName', '$email', '$password');");
             mysqli_query($conn, $insert);
-            header('location: userPage.php');
+            header('location: adminPage.php');
         }
     }
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="./style/SignUp.css">
+    <title>Admin SignUp</title>
+    <link rel="stylesheet" href="./style/signUp.css">
 </head>
 <body>
-    <?php include("nav.php"); ?>
+<?php include("nav.php"); ?>
         <section class="signup">
             <div class="SignUpForm">
                 
                 <form action="#" method="POST">
                     <h2>Sign Up</h2>
                     <?php
-                        if(isset($errors)){
-                            foreach($errors as $error){
+                        if(isset($error)){
+                            foreach($error as $error){
                                 echo '<span class="error-msg">'.$error.'</span>';
                             };
                         };
@@ -60,21 +60,6 @@
                     <div class="inputBox">
                         <input type="text" id="last name" name="lastName" required>
                         <span>Last Name</span>
-                    </div>
-                
-                    <div class="inputBox">
-                        <input type="date" id="dob" name="dob" required>
-                        <span>Date of Birth</span>
-                    </div>
-                
-                    <div class="inputBox">
-                        <input type="text" id="blood" name='blood' required />
-                        <span class="blood">Blood Group</span>
-                    </div>
-                
-                    <div class="inputBox">
-                        <textarea id="address" name="address" required></textarea>
-                        <span>Adress</span>
                     </div>
                 
                     <div class="inputBox">
@@ -91,8 +76,7 @@
                         <input type="submit" name="Submit" class='btn' required value="Send" />
                     </div>
 
-                    <p>Already have an account?  <a href="logIn.php">LogIn</a></p>
-                    <p>SignUp as Admin?  <a href="signUpAdmin.php">SignUp</a></p>
+                    <p>Already have an account?  <a href="logInAdmin.php">LogIn as Admin</a></p>
                 </form>
             </div>
 

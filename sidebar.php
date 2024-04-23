@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Admin Page</title>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-      <link rel="stylesheet" href="./style/admin.css">
+      <link rel="stylesheet" href="./style/Admin.css">
       <link rel="stylesheet" href="./style/Css.css">
 </head>
 <body>
@@ -23,20 +23,10 @@
                         <h4>Appointments</h4>
                   <li>
                         <span class="material-symbols-outlined">book_online</span>
-                        <a href="#">Appointments</a>
-                  </li>
-                  <hr>
-                  <h4>Manage Services</h4>
-                  <li>
-                        <span class="material-symbols-outlined">medical_services</span>
-                        <a href="#">Services</a>
+                        <a href="appointment.php">Appointments</a>
                   </li>
                   <hr>
                   <h4>Site Management</h4>
-                  <li>
-                        <span class="material-symbols-outlined">person</span>
-                        <a href="#">Admin</a>
-                  </li>
                   <li>
                         <span class="material-symbols-outlined">group</span>
                         <a href="users.php">Users</a>

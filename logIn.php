@@ -12,16 +12,7 @@
         if (mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_array($result);
             if (password_verify($_POST['password'], $row["password"])) {
-                if ($row['user_type'] == 'admin')
-                {
-                    header('location:adminPage.php');
-                    exit();
-                }
-                elseif ($row['user_type'] == 'user')
-                {
-                    header('location:userPage.php');
-                    exit();
-                }
+                header('location: userPage.php');
             }
             else {
                 $error[] = 'incorrect email or password!';
@@ -70,6 +61,7 @@
                     <input type="submit" name="Submit" class='btn' required value="LogIn" />
                 </div>
                 <p>New in Health Care hospital?   <a href="singup.php">Sing Up</a></p>
+                <p>LogIn as Admin?   <a href="logInAdmin.php">LogIn as Admin</a></p>
             </form>
         </div>
     </section>
