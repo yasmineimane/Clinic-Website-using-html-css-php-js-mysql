@@ -15,7 +15,7 @@ nav {
     border-bottom-right-radius: 5px;
     & > ul {
         display: grid;
-        grid-template-columns: 18px 442PX repeat(3, 1.5fr) 1fr 1fr 1fr;
+        grid-template-columns: 18px 500PX repeat(3, 1.5fr) 1fr 1fr;
 
         & li.logo {
             width: 15px;

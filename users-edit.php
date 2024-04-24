@@ -105,10 +105,6 @@
                                     <input type="email" required name="email" value="<?= $user['data']['email']; ?>">
                                     <label>Email</label>
                                 </div>
-                                <!-- <div class="mb-4">
-                                    <input type="password" required name="pass" value="<?= $user['data']['password']; ?>">
-                                    <label>Password</label>
-                                </div> -->
                                 <div class="mb-4">
                                     <button type="submit" name="editUser" class="btn btnSave">Edit</button>
                                 </div>

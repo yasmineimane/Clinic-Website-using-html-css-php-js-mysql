@@ -9,10 +9,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointments</title>
-    <link rel="stylesheet" href="./style/users.css">
+    <link rel="stylesheet" href="./style/Users.css">
 </head>
 <body>
-    <div class="row">
+    <!-- <div class="row">
         <div class="services">
             <div class="service">
                 <a href="#">Display All</a>
@@ -27,8 +27,8 @@
                 <a href="#">Add</a>
             </div>
         </div>
-    </div>
-<!-- <div class="row">
+    </div> -->
+<div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
@@ -89,6 +89,6 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </body>
 </html>

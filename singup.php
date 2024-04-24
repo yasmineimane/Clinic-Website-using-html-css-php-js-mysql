@@ -92,7 +92,6 @@
                     </div>
 
                     <p>Already have an account?  <a href="logIn.php">LogIn</a></p>
-                    <p>SignUp as Admin?  <a href="signUpAdmin.php">SignUp</a></p>
                 </form>
             </div>
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style/Home.css">
+    <link rel="stylesheet" href="./style/nav.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
             <li><a href="./services.php">Our Services</a></li>
             <li><a href="./about.php">About Us</a></li>
             <li><a href="./contact.php">Contact</a></li>
-            <li><a href="./singup.php">Sing Up</a></li>
+            <!-- <li><a href="./singup.php">Sing Up</a></li> -->
             <li><a href="./logIn.php" class="logIn">Log In</a></li>
         </ul>
     </nav>

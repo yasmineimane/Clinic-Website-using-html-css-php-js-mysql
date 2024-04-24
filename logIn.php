@@ -4,18 +4,39 @@
 
     if (isset($_POST["Submit"])) {
         $email = mysqli_real_escape_string($conn, $_POST['email']);
+        // $Pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-        $sql = "SELECT * FROM patient WHERE email = '$email'";
+        $sqlUser = "SELECT * FROM patient WHERE email = '$email'";
+        $resultUser = mysqli_query($conn, $sqlUser);
 
-        $result = mysqli_query($conn, $sql);
+        $sqlAdmin = "SELECT * FROM admin WHERE email = '$email'";
+        $resultAdmin = mysqli_query($conn, $sqlAdmin);
 
-        if (mysqli_num_rows($result) > 0) {
-            $row = mysqli_fetch_array($result);
-            if (password_verify($_POST['password'], $row["password"])) {
-                header('location: userPage.php');
+        if (mysqli_num_rows($resultUser) > 0) {
+            $rowUser = mysqli_fetch_assoc($resultUser);
+            if (password_verify($_POST['password'], $rowUser["password"]))
+            {
+                $_SESSION['user_id'] = $rowUser['Id'];
+                header("location: userPage.php");
+                exit;
             }
             else {
-                $error[] = 'incorrect email or password!';
+                $error[] = 'Incorrect email or password!';
+            }
+            
+        }
+        elseif (mysqli_num_rows($resultAdmin) > 0)
+        {
+            $rowAdmin = mysqli_fetch_assoc($resultAdmin);
+            if (password_verify($_POST['password'], $rowAdmin["password"]))
+            {
+                echo 'hi';
+                $_SESSION['admin_id'] = $rowAdmin['id'];
+                header('location: adminPage.php');
+                exit;
+            }
+            else {
+                $error[] = 'Incorrect email or password';
             }
         }
         else
@@ -30,7 +51,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/LogIn.css">
+    <link rel="stylesheet" href="./style/login.css">
     <title>Log In</title>
 </head>
 <body>
@@ -61,7 +82,7 @@
                     <input type="submit" name="Submit" class='btn' required value="LogIn" />
                 </div>
                 <p>New in Health Care hospital?   <a href="singup.php">Sing Up</a></p>
-                <p>LogIn as Admin?   <a href="logInAdmin.php">LogIn as Admin</a></p>
+                <!-- <p>LogIn as Admin?   <a href="logInAdmin.php">LogIn as Admin</a></p> -->
             </form>
         </div>
     </section>

@@ -19,7 +19,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 110px;
+    width: 260px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -31,9 +31,9 @@ body {
     transition: width 0.3s ease;
 }
 
-.sidebar:hover {
+/* .sidebar:hover {
     width: 260px;
-}
+} */
 
 .sidebar .logo {
     color: #000;
@@ -51,18 +51,18 @@ body {
     font-size: 1.15rem;
     font-weight: 600;
     margin-left: 15px;
-    display: none;
+    /* display: none; */
 }
 
-.sidebar:hover .logo h2 {
+/* .sidebar:hover .logo h2 {
     display: block;
-}
+} */
 
 .sidebar .links {
     list-style: none;
     margin-top: 20px;
     overflow-y: auto;
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
     height: calc(100% - 140px);
 }
 
@@ -84,13 +84,13 @@ body {
 .links h4 {
     color: rgb(7, 7, 71);
     font-weight: 300;
-    display: none;
+    /* display: none; */
     margin-bottom: 10px;
 }
 
-.sidebar:hover .links h4 {
+/* .sidebar:hover .links h4 {
     display: block;
-}
+} */
 
 .links hr {
     margin: 10px 8px;
@@ -108,15 +108,15 @@ body {
 .links li a {
     padding: 10px;
     color: rgb(49, 49, 130);
-    display: none;
+    /* display: none; */
     font-weight: 200;
     white-space: nowrap;
     text-decoration: none;
 }
 
-.sidebar:hover .links li a {
+/* .sidebar:hover .links li a {
     display: block;
-}
+} */
 
 .links .logout-link {
     margin-top: 20px;

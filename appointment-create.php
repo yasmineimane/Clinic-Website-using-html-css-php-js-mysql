@@ -20,9 +20,8 @@
             $insert = "INSERT INTO appointement (userEmail, serviceName, dateA, timeA) 
             VALUES('$userEmail','$serviceName', '$dateA', '$timeA')";
             mysqli_query($conn, $insert);
-            header('location:appointment.php');
         }
-        
+        header('location:appointment.php');
     }
 ?>
 

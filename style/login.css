@@ -58,6 +58,7 @@ body{
     font-size: 1rem;
     margin: 10px 0;
     border: none;
+    border-radius: 0.4rem;
     border-bottom: 2px solid rgb(143, 173, 236);
     outline: none;
     resize: none;
@@ -89,6 +90,11 @@ body{
     color: rgb(0, 119, 255);
     font-size: 12px;
     transform: translateY(-20px);
+}
+
+.LogInForm .inputBox input:focus,
+.LogInForm .inputBox input:valid {
+    padding: 10px;
 }
 
 .btn {

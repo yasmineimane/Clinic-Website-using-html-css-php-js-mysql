@@ -160,4 +160,13 @@ input[type="radio"]:hover {
 .services {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.service {
+    background: #f9fafb;
+    padding: 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
 }

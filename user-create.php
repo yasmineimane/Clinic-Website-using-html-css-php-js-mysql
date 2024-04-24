@@ -1,6 +1,8 @@
 <?php
+    session_start();
     include ("dbconnect.php");
     include("sidebar.php");
+    include("function.php");
 
     if (isset($_POST["saveUser"])) {
         $firstName = mysqli_real_escape_string($conn, $_POST['fname']);
@@ -23,8 +25,9 @@
             adress, email, password) VALUES('$firstName', '$lastName', '$dateOfBirth', '$blood',
             '$adress', '$email', '$password')";
             mysqli_query($conn, $insert);
-            header('location:users.php');
+            
         }
+        redirect('users.php', 'Added successfuly');
     }
 ?>
 
