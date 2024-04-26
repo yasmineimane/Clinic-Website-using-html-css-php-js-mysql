@@ -1,8 +1,8 @@
 <?php
-    session_start();
     include ("dbconnect.php");
-    include("sidebar.php");
     include("function.php");
+    include("Sidebar.php");
+    
 
     if (isset($_POST["saveUser"])) {
         $firstName = mysqli_real_escape_string($conn, $_POST['fname']);
@@ -45,7 +45,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4>
-                        Addd User
+                        Add User
                     </h4>
                     <a href="users.php" class="btn danger">Back</a>
                 </div>

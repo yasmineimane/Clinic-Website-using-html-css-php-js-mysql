@@ -1,6 +1,7 @@
 <?php
     include("function.php");
-    include("Sidebar.php");
+    include("userPage.php");
+    session_start();
     
 
 ?>
@@ -16,12 +17,12 @@
 <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-headerApp">
+                <div class="card-header">
                     <h4>
                         Appointments List
                     </h4>
-                    <a href="appointment-create.php" class="btn">Add</a>
-                    <a href="appointment-dates.php" class="btn btnSearch">Search</a>
+                    <a href="user-app-add.php" class="btn">Add</a>
+                    <!-- <a href="appointment-dates.php" class="btn btnSearch">Search</a> -->
                 </div>
                 <div class="card-body">
                     <?php alertMessage();?>
@@ -32,11 +33,12 @@
                             <th>Service Name</th>
                             <th>Date of Appointment</th>
                             <th>Time</th>
-                            <th>Action</th>
                         </thead>
                         <tbody>
                             <?php
-                                $appointments = getAll('appointement');
+                                $userEmail = $_SESSION['email'];
+                                $query = "SELECT * FROM appointement WHERE userEmail='$userEmail'";
+                                $appointments = mysqli_query($conn, $query);
 
                                 if (mysqli_num_rows($appointments) > 0)
                                 {
@@ -49,13 +51,6 @@
                                                 <td><?= $appointment['serviceName']; ?></td>
                                                 <td><?= $appointment['dateA']; ?></td>
                                                 <td><?= $appointment['timeA']; ?></td>
-                                                <td>
-                                                    <a href="appointments-edit.php?id=<?= $appointment['id']; ?>" class="btn">Edit</a>
-                                                    <a href="appointment-delete.php?id=<?= $appointment['id']; ?>" class="btn danger"
-                                                    onclick="return confirm('Are You Sure You Want to Delete this data?')">
-                                                        Delete
-                                                    </a>
-                                                </td>
                                             </tr>
                                         <?php
                                     }
@@ -64,7 +59,7 @@
                                 {
                                     ?>
                                         <tr>
-                                            <td colspan="8">No Record</td>
+                                            <td colspan="5">You Have No Appointment</td>
                                         </tr>
                                     <?php
                                 }

@@ -6,8 +6,8 @@
     {
         $userId = validate($paramResult);
 
-        $user = getById('patient', $userId);
-        if ($user['status'] == 200)
+        $appointment = getById('patient', $userId);
+        if ($appointment['status'] == 200)
         {
             $userDeleteRes = deleteQuery('patient', $userId);
 
@@ -18,7 +18,7 @@
                 redirect('users.php', 'Something went wrong');
             }
         }else {
-            redirect('users.php', $user['message']);
+            redirect('users.php', $appointment['message']);
         }
     }else {
         redirect('users.php', $paramResult);

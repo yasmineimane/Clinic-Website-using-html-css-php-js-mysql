@@ -1,7 +1,8 @@
 <?php
     include("dbconnect.php");
-    include("sidebar.php");
     include ("function.php");
+    include("Sidebar.php");
+    
 
     if (isset($_POST['editUser']))
     {

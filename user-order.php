@@ -16,13 +16,11 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-headerUser">
+                <div class="card-header">
                     <h4>
-                        User Lists
+                        Users List
                     </h4>
-                    <a href="user-create.php" class="btn">Add</a>
-                    <a href="user-order.php" class="btn btnSearch">Order</a>
-                    <a href="user-search.php" class="btn btnSearch">Search</a>
+                    <a href="users.php" class="btn danger">Back</a>
                 </div>
                 <div class="card-body">
                     <?php alertMessage();?>
@@ -35,11 +33,12 @@
                             <th>Blood</th>
                             <th>Adress</th>
                             <th>Email</th>
-                            <th>Action</th>
+                            <th>Number of Appointment</th>
                         </thead>
                         <tbody>
                             <?php
-                                $users = getAll('patient');
+                                $query = "SELECT * FROM patient ORDER BY nbrApp DESC";
+                                $users = mysqli_query($conn, $query);
 
                                 if (mysqli_num_rows($users) > 0)
                                 {
@@ -54,13 +53,15 @@
                                                 <td><?= $user['blood']; ?></td>
                                                 <td><?= $user['adress']; ?></td>
                                                 <td><?= $user['email']; ?></td>
-                                                <td>
+                                                <td><?= $user['nbrApp']; ?></td>
+
+                                                <!-- <td>
                                                     <a href="users-edit.php?Id=<?= $user['Id']; ?>" class="btn">Edit</a>
                                                     <a href="users-delete.php?Id=<?= $user['Id']; ?>" class="btn danger"
                                                     onclick="return confirm('Are You Sure You Want to Delete this data?')">
                                                         Delete
                                                     </a>
-                                                </td>
+                                                </td> -->
                                             </tr>
                                         <?php
                                     }

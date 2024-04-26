@@ -12,7 +12,30 @@
 .card-header {
     display: grid;
     grid-template-columns: 8fr 1fr;
-    margin-bottom: 15px;
+    gap: 1.5rem;
+    margin-bottom: 30px;
+
+    & > h4 {
+        text-align: center;
+    }
+}
+
+.card-headerApp {
+    display: grid;
+    grid-template-columns: 8fr repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 30px;
+
+    & > h4 {
+        text-align: center;
+    }
+}
+
+.card-headerUser {
+    display: grid;
+    grid-template-columns: 8fr repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 30px;
 
     & > h4 {
         text-align: center;
@@ -45,8 +68,17 @@ form {
     background-color: crimson;
 }
 
+.danger:hover {
+    background-color: rgb(237, 125, 147);
+    color: crimson;
+}
+
 .btnSave {
     padding: 0.75rem 1rem;
+}
+
+.btnSearch {
+    background-color: rgb(47, 84, 177);
 }
 
 .mb-4 {
@@ -169,4 +201,28 @@ input[type="radio"]:hover {
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.2fr;
+    padding: 20px;
+
+    & > button {
+        height: 50px;
+    }
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 1fr 0.15fr;
+    padding: 20px;
+
+    & > label {
+        left: 280px;
+    }
+
+    & > button {
+        height: 50px;
+    }
 }

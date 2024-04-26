@@ -100,6 +100,34 @@
         }
     }
 
+    function getByDate($tableName, $fromDate, $toDate)
+    {
+        global $conn;
+
+        $table = validate($tableName);
+        $fromDate = validate($fromDate);
+        $toDate = validate($toDate);
+
+        $query = "SELECT * FROM $table WHERE dateA BETWEEN '$fromDate' AND '$toDate'";
+        $result = mysqli_query($conn, $query);
+
+        return $result;
+    }
+    
+
+    function getByEmail($tableName, $email)
+    {
+        global $conn;
+
+        $table = validate($tableName);
+        $email = validate($email);
+
+        $query = "SELECT * FROM $table WHERE email='$email'";
+        $result = mysqli_query($conn, $query);
+
+        return $result;
+    }
+
     function deleteQuery($tableName, $id)
     {
         global $conn;

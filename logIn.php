@@ -1,9 +1,11 @@
 <?php
     include("dbconnect.php");
     session_start();
+    include("function.php");
 
     if (isset($_POST["Submit"])) {
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $email = validate($_POST['email']);
+        $_SESSION['email'] = $email;
         // $Pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
         $sqlUser = "SELECT * FROM patient WHERE email = '$email'";

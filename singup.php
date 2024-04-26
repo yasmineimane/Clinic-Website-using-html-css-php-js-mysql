@@ -1,14 +1,18 @@
 <?php
     include("dbconnect.php");
+    include("function.php");
+    session_start();
 
     if (isset($_POST["Submit"])) {
-        $firstName = mysqli_real_escape_string($conn, $_POST['firstName']);
-        $lastName = mysqli_real_escape_string($conn, $_POST['lastName']);
+        $firstName = validate($_POST['firstName']);
+        $lastName = validate($_POST['lastName']);
         $dateOfBirth = $_POST["dob"];
         $blood = $_POST["blood"];
         $adress = $_POST["address"];
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $email = validate($_POST['email']);
         $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+
+        $_SESSION['email'] = $email;
 
         $sql = "SELECT * FROM patient WHERE email = '$email'";
 
