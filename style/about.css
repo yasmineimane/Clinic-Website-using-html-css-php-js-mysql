@@ -49,6 +49,15 @@ main{
 /*.icon{
     color:  #1f3e72;
 */
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 700,
+        'GRAD' 0,
+        'opsz' 48
+}
+
 p{
     padding: 0.8rem;
     line-height: 1.2rem;

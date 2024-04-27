@@ -12,12 +12,6 @@
         if ($appointment['status'] == 200)
         {
             $appDeleteRes = deleteQuery('appointement', $appId);
-            $nbrQuery = "SELECT nbrApp FROM patient WHERE email= '$userEmail'";
-            $result = mysqli_query($conn, $nbrQuery);
-            $row = mysqli_fetch_assoc($result);
-            $newNbrApp = $row['nbrApp'] - 1;
-            $updateQuery = "UPDATE patient SET nbrApp = $newNbrApp WHERE email= '$userEmail'";
-            mysqli_query($conn, $updateQuery);
 
             if ($appDeleteRes)
             {

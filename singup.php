@@ -29,8 +29,6 @@
             header('location: userPage.php');
         }
     }
-
-
 ?>
 
 

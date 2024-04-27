@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="./style/About.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./style/about.css">
 </head>
 <body>
     <?php include("nav.php"); ?>
@@ -18,27 +18,27 @@
         </section>
         <section class="contentone">
             <div class="about">
-                <div class="icon">
-                    <i class="material-icons-outlined">groups</i>
-                </div>
+            <span class="material-symbols-outlined">
+                groups
+            </span>
                 <h2>All Professionals</h2>
                 <p>Welcome to healthcare, where compassionate care meets excellence. 
                 Our dedicated team ensures exceptional medical services in a patient-centered environment.
                 Trust us for all your healthcare needs.</p>
             </div>
             <div class="about">
-                <div class="icon">
-                    <i class="material-icons-outlined">security</i>
-                </div>
+                <span class="material-symbols-outlined">
+                    security
+                </span>
                 <h2>Fully Secure</h2>
                 <p>Welcome to healthcare, your trusted destination for secure and compassionate healthcare services.
                 Our commitment to security ensures your peace of mind while receiving top-quality medical care.
                 Trust us for your health and well-being.</p>
             </div>
             <div class="about">
-                <div class="icon">
-                    <i class="material-icons-outlined">sentiment_satisfied</i>
-                </div>
+                <span class="material-symbols-outlined">
+                    sentiment_very_satisfied
+                </span>
                 <h2>Happy Patients</h2>
                 <p>At healthcare, our mission is to create happy and satisfied patients.
                 With personalized care and a focus on your well-being, 
@@ -46,9 +46,9 @@
                 Experience the difference at healthcare.</p>
             </div>
             <div class="about">
-                <div class="icon">
-                    <i class="material-icons-outlined">support_agent</i>
-                </div>
+                <span class="material-symbols-outlined">
+                    support_agent
+                </span>
                 <h2>24 Hours Suupport</h2>
                 <p>At healthcare, we provide round-the-clock support to ensure your peace of mind. 
                 Our dedicated team is here for you 24/7,
