@@ -9,31 +9,41 @@
         $dateA = $_POST["doA"];
         $timeA = $_POST["timeA"];
 
-        $query = "SELECT * FROM patient WHERE email = '$userEmail'";
+        $appointmentDate = DateTime::createFromFormat('Y-m-d', $dateA);
+        $currentDateTime = new DateTime();
 
-        $result = mysqli_query($conn, $query);
-        if(!mysqli_num_rows($result) > 0){
-            $errors[] = 'There is no user with this email!';
+        if ($appointmentDate == false || $appointmentDate <= $currentDateTime)
+        {
+            $errors[] = "Invalid Date! Please choose a future date.";
         }
         else
         {
-            $sql = "SELECT * FROM appointement WHERE dateA = '$dateA' and timeA = '$timeA' and 
-            serviceName = '$serviceName'";
+            $query = "SELECT * FROM patient WHERE email = '$userEmail'";
 
-            $result = mysqli_query($conn, $sql);
-            if(mysqli_num_rows($result) > 0){
-                $errors[] = 'Appointment already plain please choose another date or time!';
+            $result = mysqli_query($conn, $query);
+            if(!mysqli_num_rows($result) > 0){
+                $errors[] = 'There is no user with this email!';
             }
             else
             {
-                $insert = "INSERT INTO appointement (userEmail, serviceName, dateA, timeA) 
-                VALUES('$userEmail','$serviceName', '$dateA', '$timeA')";
-                mysqli_query($conn, $insert);
-                $increment = "UPDATE patient SET nbrApp = nbrApp + 1
-                WHERE email = '$userEmail'";
-                mysqli_query($conn, $increment);
+                $sql = "SELECT * FROM appointement WHERE dateA = '$dateA' and timeA = '$timeA' and 
+                serviceName = '$serviceName'";
+
+                $result = mysqli_query($conn, $sql);
+                if(mysqli_num_rows($result) > 0){
+                    $errors[] = 'Appointment already plain please choose another date or time!';
+                }
+                else
+                {
+                    $insert = "INSERT INTO appointement (userEmail, serviceName, dateA, timeA) 
+                    VALUES('$userEmail','$serviceName', '$dateA', '$timeA')";
+                    mysqli_query($conn, $insert);
+                    $increment = "UPDATE patient SET nbrApp = nbrApp + 1
+                    WHERE email = '$userEmail'";
+                    mysqli_query($conn, $increment);
+                }
+                redirect('appointment.php', 'Added successfuly');
             }
-            redirect('appointment.php', 'Added successfuly');
         }
     }
 ?>
@@ -44,7 +54,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADD Appointment</title>
-    <link rel="stylesheet" href="./style/user.css">
+    <link rel="stylesheet" href="./style/users.css">
 </head>
 <body>
 <div class="row">

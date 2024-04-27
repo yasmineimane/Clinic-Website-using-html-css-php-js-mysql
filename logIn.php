@@ -6,7 +6,6 @@
     if (isset($_POST["Submit"])) {
         $email = validate($_POST['email']);
         $_SESSION['email'] = $email;
-        // $Pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
         $sqlUser = "SELECT * FROM patient WHERE email = '$email'";
         $resultUser = mysqli_query($conn, $sqlUser);
@@ -23,7 +22,7 @@
                 exit;
             }
             else {
-                $error[] = 'Incorrect email or password!';
+                $errors[] = 'Incorrect email or password!';
             }
             
         }
@@ -38,12 +37,12 @@
                 exit;
             }
             else {
-                $error[] = 'Incorrect email or password';
+                $errors[] = 'Incorrect email or password';
             }
         }
         else
         {
-            $error[] = 'incorrect email or password!';
+            $errors[] = 'Incorrect email or password!';
         }
     }
 ?>
@@ -53,7 +52,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/LogIn.css">
     <title>Log In</title>
 </head>
 <body>
@@ -64,8 +63,8 @@
             <form action="#" method="POST">
                 <h2>Log In</h2>
                 <?php
-                    if(isset($error)){
-                        foreach($error as $error){
+                    if(isset($errors)){
+                        foreach($errors as $error){
                         echo '<span class="error-msg">'.$error.'</span>';
                         };
                     };
@@ -84,7 +83,6 @@
                     <input type="submit" name="Submit" class='btn' required value="LogIn" />
                 </div>
                 <p>New in Health Care hospital?   <a href="singup.php">Sing Up</a></p>
-                <!-- <p>LogIn as Admin?   <a href="logInAdmin.php">LogIn as Admin</a></p> -->
             </form>
         </div>
     </section>

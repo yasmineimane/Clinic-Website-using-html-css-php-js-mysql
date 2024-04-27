@@ -1,6 +1,4 @@
 <?php
-    // session_start();
-
     include "dbconnect.php";
 
     function validate($inputData)
@@ -60,8 +58,6 @@
             return 'No id given';
         }
     }
-
-    // echo "Received ID from URL: " . $_GET['Id'] . "<br>";
     function getById($tableName, $id)
     {
         global $conn;
@@ -123,6 +119,19 @@
         $email = validate($email);
 
         $query = "SELECT * FROM $table WHERE email='$email'";
+        $result = mysqli_query($conn, $query);
+
+        return $result;
+    }
+
+    function order($tableName, $element)
+    {
+        global $conn;
+
+        $table = validate($tableName);
+        $element = validate($element);
+
+        $query = "SELECT * FROM $table ORDER BY $element DESC";
         $result = mysqli_query($conn, $query);
 
         return $result;

@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 body{
-    background-image: url('../images/log.png');
+    background-image: url('../images/login.jpg');
     background-size: cover;
 }
 
@@ -114,54 +114,4 @@ body{
 
 .error-msg{
     color: red;
-    /* margin:8px 0;
-    display: block;
-    background: crimson;
-    color:#fff;
-    border-radius: 5px;
-    font-size: 20px;
-    padding: 7px; */
 }
-
-/* .login-form input[type="email"],
-.login-form input[type="password"]{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 5px;
-    border: 1px solid rgb(222, 216, 216);
-}
-.login-form input[type="checkbox"]{
-    margin-bottom: 20px;
-
-}
-.login-form  button {
-    width: 100%;
-    background-color: #aec0dc;
-    color: white;
-    padding: 8px;
-    border-radius: 16px;
-    cursor: pointer;
-}
-
-.remembre{
-    display: flex;
-}
-
-.login-form  > h1{
-    font-size: 40px;
-    color:  rgba(0, 81, 255, 0.902);
-    margin-bottom: 10px;
-    text-align: center;
-}
-.login-form form  p{
-    margin-top: 10px;
-    font-size: 18px;
-    text-align: center;
-}
-.login-form  form p a{
-    color: blue;
-}
-
-.login-form  > p > a:hover {
-    color: white;
-} */

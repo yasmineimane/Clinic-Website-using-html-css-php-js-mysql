@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style/Home.css">
 </head>
 <body>
     <?php include("nav.php"); ?>
@@ -18,7 +18,9 @@
             </p>
             <a href="./logIn.php" class="btn btn__home">Make an Apointment</a>
         </div>
-        <img src="./images/home.png" alt="home">
+        <div class="home_img">
+            <img src="./images/doctor.png" alt="home">
+        </div>
     </div>
 </body>
 </html>

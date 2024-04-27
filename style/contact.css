@@ -28,12 +28,11 @@ body {
     text-align: center;
 }
 .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    position: center;
     padding: 20px;
 }
 .contact-info{
-    width: 60%;
+    width: 80%;
     height: 70%;
     padding: 30px 40px;
     background-color: transparent;
@@ -63,7 +62,12 @@ body {
 .icons a i {
     font-size: 30px; 
 }
-.contact-form{
+.doc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #1f3e72;
+}
+/* .contact-form{
     width: 80%;
     padding: 30px 40px;
     background-color: transparent;
@@ -117,4 +121,4 @@ body {
 footer{
     text-align: center;
     color: #1f3e72;;
-}
+} */

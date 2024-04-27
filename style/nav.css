@@ -10,12 +10,12 @@ body {
 nav {
     padding: 1rem;
     font-size: 16px;
-    background-color: #aec0dc;
+    background-color: #275085;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     & > ul {
         display: grid;
-        grid-template-columns: 18px 500PX repeat(3, 1.5fr) 1fr 1fr;
+        grid-template-columns: 18px 500PX repeat(3, 1.5fr) repeat(2, 1fr);
 
         & li.logo {
             width: 15px;
@@ -49,8 +49,9 @@ nav {
 div.home {
     
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1.5fr 1fr;
     padding-top: 1rem;
+    padding: 40px;
 
     & > div.homeContent {
         display: flex;
@@ -61,13 +62,21 @@ div.home {
         & > h1 {
             color: #1f3e72;
             padding: 0 8rem;
-            font-size: 2.3rem;
+            font-size: 2.7rem;
         }
 
         & > p {
             padding: 2.5rem 8rem;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: #8b97ae;
+        }
+
+        & > .home_img {
+            width: 100%;
+
+            & > img {
+                width: 100%;
+            }
         }
 
         & > a.btn__home {

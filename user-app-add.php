@@ -1,52 +1,44 @@
 <?php
-    include("function.php");
-    include("userPage.php");
-    session_start();
-    
+include("function.php");
+include("userPage.php");
+session_start();
 
-    if (isset($_POST["saveApp"])) {
-        $userEmail = $_SESSION['email'];
-        $serviceName = validate($_POST['serviceName']);
-        $dateA = $_POST["doA"];
-        $timeA = $_POST["timeA"];
+if (isset($_POST["saveApp"])) {
+    $userEmail = $_SESSION['email'];
+    $serviceName = validate($_POST['serviceName']);
+    $dateA = $_POST["doA"];
+    $timeA = $_POST["timeA"];
 
-        $userDateTime = DateTime::createFromFormat('d/m/Y', $dateA);
-        $currentDateTime = new DateTime();
+    $appointmentDate = DateTime::createFromFormat('Y-m-d', $dateA);
+    $currentDateTime = new DateTime();
 
-        if ($userDateTime < $currentDateTime)
-        {
-            $errors[] = 'Invaide Date!';
-        }
-        else
-        {
-            $query = "SELECT * FROM patient WHERE email = '$userEmail'";
+    if ($appointmentDate === false || $appointmentDate <= $currentDateTime) {
+        $errors[] = "Invalid Date! Please choose a future date.";
+    } else {
+        $query = "SELECT * FROM patient WHERE email = '$userEmail'";
+        $result = mysqli_query($conn, $query);
 
-            $result = mysqli_query($conn, $query);
-            if(!mysqli_num_rows($result) > 0){
-                $errors[] = 'There is no user with this email!';
-            }
-            else
-            {
-                $sql = "SELECT * FROM appointement WHERE dateA = '$dateA' and timeA = '$timeA' and 
+        if (!mysqli_num_rows($result) > 0) {
+            $errors[] = 'There is no user with this email!';
+        } else {
+            $sql = "SELECT * FROM appointement WHERE dateA = '$dateA' AND timeA = '$timeA' AND 
                 serviceName = '$serviceName'";
+            $result = mysqli_query($conn, $sql);
 
-                $result = mysqli_query($conn, $sql);
-                if(mysqli_num_rows($result) > 0){
-                    $errors[] = 'Appointment already plain please choose another date or time!';
-                }
-                else
-                {
-                    $insert = "INSERT INTO appointement (userEmail, serviceName, dateA, timeA) 
-                    VALUES('$userEmail','$serviceName', '$dateA', '$timeA')";
-                    mysqli_query($conn, $insert);
-                    $increment = "UPDATE patient SET nbrApp = nbrApp + 1
-                    WHERE email = '$userEmail'";
-                    mysqli_query($conn, $increment);
-                }
-                redirect('user-appointment.php', 'Added successfuly');
+            if (mysqli_num_rows($result) > 0) {
+                $errors[] = 'Appointment already booked. Please choose another date or time!';
+            } else {
+                $insert = "INSERT INTO appointement (userEmail, serviceName, dateA, timeA) 
+                    VALUES ('$userEmail', '$serviceName', '$dateA', '$timeA')";
+                mysqli_query($conn, $insert);
+
+                $increment = "UPDATE patient SET nbrApp = nbrApp + 1 WHERE email = '$userEmail'";
+                mysqli_query($conn, $increment);
             }
+            redirect('user-appointment.php', 'Added successfully');
         }
     }
+}
 ?>
 
 <!DOCTYPE html>
@@ -77,10 +69,6 @@
                         };
                     ?>
                     <form action="#" method="POST">
-                        <!-- <div class="mb-4">
-                            <input type="text" name="userEmail">
-                            <label>User Email</label>
-                        </div> -->
                         <div class="mb-4">
                             <select name="serviceName">
                                 <option value="Cardiology">Cardiology</option>

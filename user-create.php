@@ -2,30 +2,24 @@
     include ("dbconnect.php");
     include("function.php");
     include("Sidebar.php");
-    
-
     if (isset($_POST["saveUser"])) {
-        $firstName = mysqli_real_escape_string($conn, $_POST['fname']);
-        $lastName = mysqli_real_escape_string($conn, $_POST['lname']);
+        $firstName = validate($_POST['fname']);
+        $lastName = validate($_POST['lname']);
         $dateOfBirth = $_POST["dobirth"];
         $blood = $_POST["blood"];
         $adress = $_POST["adress"];
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $email = validate($_POST['email']);
         $password = password_hash($_POST["pass"], PASSWORD_DEFAULT);
-
         $sql = "SELECT * FROM patient WHERE email = '$email'";
-
         $result = mysqli_query($conn, $sql);
         if(mysqli_num_rows($result) > 0){
-            $error[] = 'user already exist!';
+            $errors[] = 'user already exist!';
         }
-        else
-        {
+        else{
             $insert = "INSERT INTO patient (First_Name, Last_Name, Date_of_birth, blood,
             adress, email, password) VALUES('$firstName', '$lastName', '$dateOfBirth', '$blood',
             '$adress', '$email', '$password')";
             mysqli_query($conn, $insert);
-            
         }
         redirect('users.php', 'Added successfuly');
     }
@@ -51,6 +45,13 @@
                 </div>
 
                 <div class="card-body">
+                    <?php
+                        if(isset($errors)){
+                            foreach($errors as $error){
+                            echo '<span class="error-msg">'.$error.'</span>';
+                            };
+                        };
+                    ?>
                     <form action="#" method="POST">
                         <div class="mb-4">
                             <input type="text" name="fname">

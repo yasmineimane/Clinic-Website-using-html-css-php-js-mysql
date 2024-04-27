@@ -22,7 +22,6 @@
                         Appointments List
                     </h4>
                     <a href="user-app-add.php" class="btn">Add</a>
-                    <!-- <a href="appointment-dates.php" class="btn btnSearch">Search</a> -->
                 </div>
                 <div class="card-body">
                     <?php alertMessage();?>

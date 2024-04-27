@@ -37,8 +37,7 @@
                         </thead>
                         <tbody>
                             <?php
-                                $query = "SELECT * FROM patient ORDER BY nbrApp DESC";
-                                $users = mysqli_query($conn, $query);
+                                $users = order('patient', 'nbrApp');
 
                                 if (mysqli_num_rows($users) > 0)
                                 {
@@ -54,14 +53,6 @@
                                                 <td><?= $user['adress']; ?></td>
                                                 <td><?= $user['email']; ?></td>
                                                 <td><?= $user['nbrApp']; ?></td>
-
-                                                <!-- <td>
-                                                    <a href="users-edit.php?Id=<?= $user['Id']; ?>" class="btn">Edit</a>
-                                                    <a href="users-delete.php?Id=<?= $user['Id']; ?>" class="btn danger"
-                                                    onclick="return confirm('Are You Sure You Want to Delete this data?')">
-                                                        Delete
-                                                    </a>
-                                                </td> -->
                                             </tr>
                                         <?php
                                     }

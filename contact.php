@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/Contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./style/contact.css">
     <title>Contact</title>
 </head>
 <body>
@@ -15,13 +16,13 @@
             <p>Send us a message</p>
         </div>
         <div class="container">
-            <section class="contact-form">
+            <!-- <section class="contact-form">
                 <p>Fill out the form below and we'll be in touch soon. </p>
-                <form action="mailto:aichamek318@gmail.com" method="POST" enctype="text/plain">
+                <form action="#" method="POST">
                     <label for="First Name">First Name*</label>
-                    <input type="text" id="first Name" name="first Name" required>
+                    <input type="text" id="first Name" name="firstName" required>
                     <label for="Last Name">Last Name*</label>
-                    <input type="text" id="last Name" name="last Name " required>
+                    <input type="text" id="last Name" name="lastName" required>
                     <label for="Phone">Phone*</label>
                     <input type="phone" id="phone" name="phone" required>
                     <label for="email">Email*</label>
@@ -30,20 +31,20 @@
                     <textarea id="message" name="message" rows="5" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
-            </section>
+            </section> -->
             <section class="contact-info">
                 <div class="c-info">
                     <div class="info">
-                        <h3>Call US</h3>
+                        <h3><i class="fas fa-phone"></i>Call US</h3>
                         <p>+123 456 789</p>
                     </div>
                     <div class="info">
-                        <h3>Email Us</h3>
+                        <h3><i class="fas fa-envelope"></i> Email Us</h3>
                         <a href="mailto:our email">Healthcare02@Gmail.com</a>
                     </div>
                     <div class="info">
-                        <h3>Our Location</h3>
-                        <p>123 Main Street,Zeboudj<br>Chlef,Algeria</p>
+                        <h3><i class="fas fa-map-marker-alt"></i>Our Location</h3>
+                        <p>123 Main Street,Zeboudj,Chlef,Algeria</p>
                     </div>
                 </div>
                 <div class="Smedia">
@@ -56,11 +57,37 @@
                         <a href="https://www.linkedin.com/your_linkedin_profile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://wa.me/your_whatsapp_number" target="_blank"><i class="fab fa-whatsapp"></i></a>    
                     </div>
+                <div class="doccontact">
+                    <h3>Our Doctors Contact</h3>
+                    <div class="contact">
+                        <div class="doc">
+                            <h4>Dr. John Smith</a></h4>
+                            <a href="mailto:our email">Drjohnsmith@Gmail.com<i class="fas fa-envelope"></i></a>
+                        </div>
+                        <div class="doc">
+                            <h4>Dr. Jenny Wilson</h4>
+                            <a href="mailto:our email">Drjennywilson@Gmail.com<i class="fas fa-envelope"></i></a>
+                        </div>
+                        <div class="doc">
+                            <h4>Dr. Kristin Watson</h4>
+                            <a href="mailto:our email">Drkristinwatson@Gmail.com<i class="fas fa-envelope"></i></a>
+                        </div>
+                        <div class="doc">
+                            <h4>Dr. Bella Switie</h4>
+                            <a href="mailto:our email">Drbellaswitie@Gmail.com<i class="fas fa-envelope"></i></a>
+                        </div>
+                        <div class="doc">
+                            <h4>Dr. Ringin Ozlem</h4>
+                            <a href="mailto:our email">Drringinozlem@Gmail.com<i class="fas fa-envelope"></i></a>
+                        </div>
+                        <div class="doc">
+                            <h4>Dr. Bahar Ozden</h4>
+                            <a href="mailto:our email">Drbaharozden@Gmail.com<i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
-    <footer>
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
-    </footer>
 </body>
 </html>
