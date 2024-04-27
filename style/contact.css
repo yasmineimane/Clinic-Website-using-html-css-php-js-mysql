@@ -2,8 +2,6 @@
 
 
 body {
-    background-image: url('../images/log.png');
-    background-size: cover;
     font-family: "Bai Jamjuree", sans-serif;
     font-weight: bold;
 }
@@ -12,7 +10,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+main{
+    background-color: white;
+}
 .header{
     text-align: center;
 }
@@ -29,21 +29,39 @@ body {
 }
 .container{
     position: center;
-    padding: 20px;
 }
 .contact-info{
     width: 80%;
-    height: 70%;
+    height: 125vh;
     padding: 30px 40px;
-    background-color: transparent;
+    background-color: white;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     border-radius: 10px;
-    margin-left: 100px;
+    /*margin-right: 20px;*/
+    margin-left: 140px;
+    /* margin-bottom: 10px; */
 }
+
+.c-info h3, .Smedia h3 {
+    text-align: center;
+    margin: 20px;
+    color: rgb(164, 178, 209);
+}
+
+.c-infocon {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
 .info{
     text-align: center;
+    margin: 20px;
+    color: rgb(164, 178, 209);
+    background: #f0efef;
+    padding: 10px;
 }
 .info > h3{
     margin-top: 15px;
@@ -55,70 +73,40 @@ body {
 .icons{
     text-align: center;
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: space-between;
+    margin-top: 10px;
     cursor: pointer;
 }
 .icons a i {
+    margin-left: 30px;
     font-size: 30px; 
 }
-.doc {
+.doccontact{
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+
+    & > h3 {
+        margin: 20px;
+        color: rgb(164, 178, 209);
+    }
+}
+.contact {
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    color: #1f3e72;
+    gap: 2rem;
 }
-/* .contact-form{
-    width: 80%;
-    padding: 30px 40px;
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    border-radius: 10px;
-    margin-left: 140px;
+.doc{
+    background: #f0efef;
+    padding: 10px;
 }
 
-.contact-form label{
+.contact > h4{
+    margin-top: 15px;
     color: #1f3e72;
 }
-.contact-form > p{
-    font-weight: 900;
-    text-align: center;
-    color: rgba(0, 81, 255, 0.902);
-    margin-bottom: 10px;
+.contact a{
+    margin-top: 15px;
+    color: #1f3e72;
 }
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="phone"],
-.contact-form textarea  {
-    position: relative;
-    width: 100%;
-    margin-top: 3px;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="phone"],
-.contact-form textarea  {
-    width: 100%;
-    padding: 11px 0;
-    font-size: 1rem;
-    margin: 10px 0;
-    border: 2px solid rgb(143, 173, 236);;
-    outline: none;
-    resize: none;
-}
-.contact-form  button {
-    text-align: center;
-    margin: auto;
-    background-color: #1f3e72;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-footer{
-    text-align: center;
-    color: #1f3e72;;
-} */
