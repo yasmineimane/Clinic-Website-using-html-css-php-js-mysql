@@ -24,7 +24,7 @@
                     <a href="user-app-add.php" class="btn">Add</a>
                 </div>
                 <div class="card-body">
-                    <?php alertMessage();?>
+                    <!-- <?php alertMessage();?> -->
                     <table class="table">
                         <thead>
                             <th>Id</th>
