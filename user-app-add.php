@@ -15,12 +15,6 @@ if (isset($_POST["saveApp"])) {
     if ($appointmentDate === false || $appointmentDate <= $currentDateTime) {
         $errors[] = "Invalid Date! Please choose a future date.";
     } else {
-        $query = "SELECT * FROM patient WHERE email = '$userEmail'";
-        $result = mysqli_query($conn, $query);
-
-        if (!mysqli_num_rows($result) > 0) {
-            $errors[] = 'There is no user with this email!';
-        } else {
             $sql = "SELECT * FROM appointement WHERE dateA = '$dateA' AND timeA = '$timeA' AND 
                 serviceName = '$serviceName'";
             $result = mysqli_query($conn, $sql);
@@ -36,7 +30,6 @@ if (isset($_POST["saveApp"])) {
                 mysqli_query($conn, $increment);
             }
             redirect('user-appointment.php', 'Added successfully');
-        }
     }
 }
 ?>
