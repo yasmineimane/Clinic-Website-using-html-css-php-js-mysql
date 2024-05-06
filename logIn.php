@@ -17,7 +17,6 @@
             $rowUser = mysqli_fetch_assoc($resultUser);
             if (password_verify($_POST['password'], $rowUser["password"]))
             {
-                $_SESSION['user_id'] = $rowUser['Id'];
                 header("location: userPage.php");
                 exit;
             }
@@ -31,8 +30,6 @@
             $rowAdmin = mysqli_fetch_assoc($resultAdmin);
             if (password_verify($_POST['password'], $rowAdmin["password"]))
             {
-                echo 'hi';
-                $_SESSION['admin_id'] = $rowAdmin['id'];
                 header('location: adminPage.php');
                 exit;
             }
