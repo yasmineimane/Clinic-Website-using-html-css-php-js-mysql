@@ -100,31 +100,31 @@
                         </div>
                         <div class="mb-4">
                             <div class="appTimeElement">
-                                <input type="radio" name="timeA">
+                                <input type="radio" name="timeA" value="9:30am -> 11:00am">
                                 <label>9:30am -> 11:00am</label>
                             </div>
                         </div>
                         <div class="mb-4">
                             <div class="appTimeElement">
-                                <input type="radio" name="timeA">
+                                <input type="radio" name="timeA" value="11:00am -> 12:30pm">
                                 <label>11:00am -> 12:30pm</label>
                             </div>
                         </div>
                         <div class="mb-4">
                             <div class="appTimeElement">
-                                <input type="radio" name="timeA">
+                                <input type="radio" name="timeA" value="13:30pm -> 15:00pm">
                                 <label>13:30pm -> 15:00pm</label>
                             </div>
                         </div>
                         <div class="mb-4">
                             <div class="appTimeElement">
-                                <input type="radio" name="timeA">
+                                <input type="radio" name="timeA" value="15:00pm -> 16:30pm">
                                 <label>15:00pm -> 16:30pm</label>
                             </div>
                         </div>
                         <div class="mb-4">
                             <div class="appTimeElement">
-                                <input type="radio" name="timeA">
+                                <input type="radio" name="timeA" value="16:30pm -> 18:00pm">
                                 <label>16:30pm -> 18:00pm</label>
                             </div>
                         </div>
